@@ -32,9 +32,9 @@ namespace FileManager
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.MediaListBox = new System.Windows.Forms.ListBox();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.ShowLocation = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
@@ -59,16 +59,6 @@ namespace FileManager
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(350, 352);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(269, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Show Image Dimensions";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // MediaListBox
             // 
             this.MediaListBox.FormattingEnabled = true;
@@ -85,17 +75,27 @@ namespace FileManager
             this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(12, 382);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(765, 47);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(765, 214);
             this.axWindowsMediaPlayer1.TabIndex = 4;
+            // 
+            // ShowLocation
+            // 
+            this.ShowLocation.Location = new System.Drawing.Point(442, 353);
+            this.ShowLocation.Name = "ShowLocation";
+            this.ShowLocation.Size = new System.Drawing.Size(238, 23);
+            this.ShowLocation.TabIndex = 5;
+            this.ShowLocation.Text = "Show Location";
+            this.ShowLocation.UseVisualStyleBackColor = true;
+            this.ShowLocation.Click += new System.EventHandler(this.ShowLocation_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 502);
+            this.ClientSize = new System.Drawing.Size(801, 599);
+            this.Controls.Add(this.ShowLocation);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.MediaListBox);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
@@ -111,9 +111,9 @@ namespace FileManager
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ListBox MediaListBox;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private System.Windows.Forms.Button ShowLocation;
     }
 }
 
